@@ -489,18 +489,16 @@
 
             .padel-illustration {
                 width: 100%;
-                max-width: 450px;     
-                height: auto;         
-                overflow: hidden;
+                height: auto;           /* 🔑 altura se adapta al contenido */
+                max-width: 90%;         /* evita que sea demasiado ancha */
                 margin: 0 auto 20px auto;
-                border-radius: 20px;          
+                border-radius: 20px;      
             }
 
             .padel-illustration img {
-                width: 100%;          
-                height: auto;         
-                max-height: 300px;    
-                display: block;
+                width: 100%;
+                height: auto;           /* 🔑 mantiene proporción */
+                object-fit: contain;    /* 🔑 todo el contenido visible, sin recortar */
                 border-radius: 20px;
             }
 
