@@ -140,28 +140,29 @@
         }
 
         .padel-illustration {
-            width: 100%;
-            max-width: 450px;
-            height: 300px;
-            margin: 0 auto 30px auto;
-            background: linear-gradient(135deg, rgba(124, 179, 66, 0.1) 0%, rgba(255, 152, 0, 0.1) 100%);
-            border-radius: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid rgba(124, 179, 66, 0.2);
-            box-shadow: 0 20px 60px rgba(124, 179, 66, 0.2);
-            animation: float 6s ease-in-out infinite;
-            overflow: hidden;
-            position: relative;
-        }
+    width: 100%;
+    max-width: 1080px; /* ancho máximo que recomendamos para usar una sola imagen */
+    height: auto;       /* altura automática para mantener proporción */
+    margin: 0 auto 30px auto;
+    background: linear-gradient(135deg, rgba(124, 179, 66, 0.1) 0%, rgba(255, 152, 0, 0.1) 100%);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(124, 179, 66, 0.2);
+    box-shadow: 0 20px 60px rgba(124, 179, 66, 0.2);
+    animation: float 6s ease-in-out infinite;
+    overflow: hidden;
+    position: relative;
+}
 
-        .padel-illustration img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 28px;
-        }
+.padel-illustration img {
+    width: 100%;      /* ocupa todo el ancho del contenedor */
+    height: auto;     /* mantiene proporción */
+    object-fit: contain; /* 🔑 no recorta el texto de la imagen */
+    border-radius: 28px;
+    display: block;    /* evita espacios extra debajo de la imagen */
+}
 
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
